@@ -126,9 +126,9 @@ function Navbar() {
                   onChange={onChange}
                   value={user.gender} >
                   <option>Select gender</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Other</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="other">Other</option>
                 </Form.Select>
               </div>
 
@@ -146,12 +146,12 @@ function Navbar() {
                   value={user.country}
                   placeholder='Select country' >
                   <option>Select Country</option>
-                  <option value="1">India</option>
-                  <option value="2">USA</option>
-                  <option value="3">China</option>
-                  <option value="4">Canda</option>
-                  <option value="5">Russia</option>
-                  <option value="6">Brazil</option>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  <option value="China">China</option>
+                  <option value="Canda">Canda</option>
+                  <option value="Russia">Russia</option>
+                  <option value="Brazil">Brazil</option>
                 </Form.Select>
               </div>
 

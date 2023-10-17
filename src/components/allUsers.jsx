@@ -3,9 +3,12 @@ import UserDetail from './userDetail'
 import UserContext from "../context/user/UserContext";
 import { Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+import { useNavigate} from 'react-router-dom';
 
 
 function AllUsers() {
+    const navigate = useNavigate();
+
     const context = useContext(UserContext);
     const { users, getUsers, editUser } = context;
 
@@ -18,18 +21,19 @@ function AllUsers() {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleshow = () => setShow(true);
+    // const handleshow = () => setShow(true);
 
     const updateUser = (currentUser) => {
         setShow(true);
         setuser({ id: currentUser._id, name: currentUser.name, email: currentUser.email, phone: currentUser.phone, dob: currentUser.dob, gender: currentUser.gender, country: currentUser.country });
-        
+
     };
 
     const handleOnClick = (e) => {
         e.preventDefault();
         editUser(user.id, user.name, user.email, user.phone, user.dob, user.gender, user.country);
         setShow(false);
+        navigate(0);
     };
 
     const onChange = (e) => {
@@ -115,14 +119,14 @@ function AllUsers() {
                                     Gender
                                 </label>
                                 <Form.Select aria-label="gender"
-                                id='gender'
-                                name="gender"
-                                onChange={onChange}
-                                value={user.gender} >
+                                    id='gender'
+                                    name="gender"
+                                    onChange={onChange}
+                                    value={user.gender} >
                                     <option>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
                                 </Form.Select>
                             </div>
 
@@ -140,12 +144,12 @@ function AllUsers() {
                                     value={user.country}
                                 >
                                     <option>Select Country</option>
-                                    <option value="1">India</option>
-                                    <option value="2">USA</option>
-                                    <option value="3">China</option>
-                                    <option value="4">Canda</option>
-                                    <option value="5">Russia</option>
-                                    <option value="6">Brazil</option>
+                                    <option value="India">India</option>
+                                    <option value="USA">USA</option>
+                                    <option value="China">China</option>
+                                    <option value="Canda">Canda</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Brazil">Brazil</option>
                                 </Form.Select>
                             </div>
                         </form>

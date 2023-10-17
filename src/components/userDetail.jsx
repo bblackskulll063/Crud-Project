@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import UserContext from "../context/user/UserContext";
 
 function UserDetail(props) {
@@ -7,13 +7,16 @@ function UserDetail(props) {
     const { deleteUser } = context;
     const { user, updateUser } = props;
 
+    const date = new Date(user.dob);
+
+
     return (
         <tr>
             <td>{user.rank}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.phone}</td>
-            <td>{user.dob}</td>
+            <td>{date.toLocaleDateString()}</td>
             <td>{user.gender}</td>
             <td>{user.country}</td>
             <td>

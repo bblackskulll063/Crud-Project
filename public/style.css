@@ -33,7 +33,6 @@ body {
   height: 60px;
   margin: 30px 0;
   padding: 0 30px;
-
 }
 .table-box td {
   width: 1409px;
@@ -41,7 +40,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px 20px;
-  
 }
 
 svg {
@@ -66,13 +64,13 @@ svg {
   font-weight: 600;
 }
 
-/* .add-user label {
+.add-user label {
   margin-top: 12px;
   padding: 0 5px;
-} */
-/* .add-user input,
+}
+.add-user input,
 .add-user Select {
-  width: 488px;
+  /* width: 488px; */
   height: 58px;
   border-radius: 10px;
   border: 1px solid #e5e5e5;
@@ -81,4 +79,11 @@ svg {
   font-weight: 600;
   font-size: 14;
   margin: 8px 0;
-} */
+}
+
+.modal-content {
+  border-radius: 30px !important;
+  /* width: 622px !important;
+  height: 897px !important; */
+  padding: 30px !important;
+}

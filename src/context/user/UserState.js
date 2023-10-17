@@ -54,7 +54,7 @@ const UserState = (props) => {
       body: JSON.stringify({ name, email, phone, dob, gender, country }),
     });
     const json = await response.json();
-    // console.log(json);
+    console.log(json);
 
     let newUser = JSON.parse(JSON.stringify(users));
     // logic for edit
