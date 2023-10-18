@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 // Available Routes
-app.use('/user', require('./routes/user'))
+app.use('/', require('./routes/user'))
 
 app.listen(port, () => {
   console.log(`connection is created at port no.${port}`)
