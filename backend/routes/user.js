@@ -31,7 +31,7 @@ router.post(
       const {rank, name, email, phone, dob, gender, country } = req.body;
 
       // If there are errors, return Bad request and the errors
-      const user = new UserModel({rank, name, email, phone, dob, gender, country, });
+      const user = new UserModel({rank,name, email, phone, dob, gender, country, });
       const savedNote = await user.save();
 
       res.json(savedNote);
@@ -44,11 +44,10 @@ router.post(
 
 // ROUTE 3: Update an existing Note using: PUT "/api/notes/updatenote". Login required
 router.put("/updateuser/:id", async (req, res) => {
-  const {rank, name, email, phone, dob, gender, country } = req.body;
+  const {name, email, phone, dob, gender, country } = req.body;
   try {
     // Create a newNote object
     const newUser = {};
-    if (rank) { newUser.rank = rank; }
     if (name) { newUser.name = name; }
     if (email){ newUser.email = email;}
     if (phone){ newUser.phone = phone;}
