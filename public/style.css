@@ -22,35 +22,41 @@ body {
 }
 
 .table-box {
-  margin: 35px 0;
+  margin: 28px 0;
   border: 1px solid #dee2e6;
   border-radius: 30px;
   width: 1414px;
+  background-color: #F8F8F8;
 }
 
-.table {
-  width: 1300px;
-  height: 60px;
-  margin: 30px 0;
-  padding: 0 30px;
+.inner-table {
+  margin-bottom: 27px;
 }
-.table-box td {
-  width: 1409px;
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 20px;
+
+td,
+th {
+  font-weight: 700;
+  font-size: 14px;
+  width: 500px !important;
+  padding: 20px 0;
+  border-bottom: 1px solid #dee2e6 !important;
+}
+thead {
+  border-bottom: 1px solid #dee2e6 !important;
+  border-top-right-radius: 30px;
+}
+tbody {
+  background-color: white;
+}
+
+.first-col td:nth-child(1), th:nth-child(1){
+  padding-left: 32px !important;
 }
 
 svg {
   cursor: pointer;
   margin: 0 11px;
 }
-
-/* tr {
-  width: 1409px;
-  height: 60px;
-} */
 
 .add-button {
   border: none;
@@ -70,7 +76,7 @@ svg {
 }
 .add-user input,
 .add-user Select {
-  /* width: 488px; */
+  width: 488px;
   height: 58px;
   border-radius: 10px;
   border: 1px solid #e5e5e5;
@@ -83,7 +89,14 @@ svg {
 
 .modal-content {
   border-radius: 30px !important;
-  /* width: 622px !important;
-  height: 897px !important; */
+  width: 700px !important;
+  height: auto !important;
   padding: 30px !important;
+  font-weight: 600 !important;
+  font-size: 16 !important;
+  
+}
+.modal{
+  
+  background: rgba(255, 255, 255, 0.70) !important;
 }
