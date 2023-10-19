@@ -5,13 +5,14 @@ import UserContext from "../context/user/UserContext";
 function UserDetail(props) {
     const context = useContext(UserContext);
     const { deleteUser } = context;
-    const { user, updateUser } = props;
+    const { user, updateUser, id } = props;
 
     const date = new Date(user.dob);
 
 
     return (
-        <tr>
+        <tr className="first-col">
+            {/* <td>{id}</td> */}
             <td>{user.rank}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>

@@ -28,7 +28,7 @@ function Navbar() {
 
   return (
     <div >
-      <nav className="navbar heading">
+      <nav className="navbar nav-box">
 
         <Modal
           show={show}

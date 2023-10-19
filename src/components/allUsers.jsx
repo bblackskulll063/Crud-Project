@@ -162,7 +162,7 @@ function AllUsers() {
                 </Modal.Footer>
             </Modal>
             <div className='table-box '>
-                <table className="table ">
+                <table className="inner-table">
                     <thead>
                         <tr >
                             <th scope="col">ID</th>
@@ -178,11 +178,13 @@ function AllUsers() {
                     <tbody>
 
                         {users &&
-                            users.map((employee) => {
+                            users.map((employee, id=0) => {
+                            id++;
                                 return (
                                     <UserDetail key={employee._id}
                                         updateUser={updateUser}
                                         user={employee}
+                                        // id={id}
                                     />
 
                                 );
